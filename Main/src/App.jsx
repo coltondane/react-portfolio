@@ -6,6 +6,10 @@ import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
 
+// import click handler helpers
+import { aboutMe, portfolio, contactMe, resume } from "./utils/helpers";
+
+
 function App() {
   return (
     <div className="portfolio-app">
@@ -19,8 +23,8 @@ function App() {
             <button onClick={() => portfolio()} className="portfolio-btn">
               Portfolio
             </button>
-            <button onClick={() => contact()} className="contact-btn">
-              Contact
+            <button onClick={() => contactMe()} className="contact-btn">
+              Contact Me
             </button>
             <button onClick={() => resume()} className="resume-btn">
               Resume
@@ -35,27 +39,14 @@ function App() {
         <Resume />
       </div>
       <footer>
-        <p>Connect with me:</p>
-        <ul>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/colton-laidig-13781424b/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/coltondane"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </li>
-        </ul>
+      <div>
+      <a href="https://www.linkedin.com/in/colton-laidig-13781424b/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/coltondane" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
       </footer>
     </div>
   );
