@@ -44,6 +44,7 @@ function Contact() {
       setEmail('');
       setMessage('');
       setFormSubmitted(true);
+      alert('Thank you for reaching out! I will get back to you as soon as possible :)')
     } else {
       alert('Please fill out all fields before submitting!');
     }

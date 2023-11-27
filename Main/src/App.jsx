@@ -1,6 +1,6 @@
 // root imports
 import {useState} from 'react';
-import "./App.css";
+import "../src/style/App.css";
 // import root component
 import Portfolio from "./pages/Portfolio";
 import AboutMe from "./pages/AboutMe";
@@ -31,8 +31,8 @@ function App() {
   return (
     <div className="portfolio-app">
       <header className="header-container">
-        <h1>Colton Laidig</h1>
-        <div className="navigation">
+        <h1 className='name'>Colton Laidig</h1>
+        <nav className="navigation">
           <ul>
             <button onClick={renderAboutMe} className="about-me-btn">
               About Me
@@ -47,7 +47,7 @@ function App() {
               Resume
             </button>
           </ul>
-        </div>
+        </nav>
       </header>
       <div className="content">
         {currentSection === "About Me" && <AboutMe />}
