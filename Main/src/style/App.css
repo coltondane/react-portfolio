@@ -32,3 +32,17 @@ header {
   .content {
     background-image: linear-gradient(to right, #363535 0%, #8d8c8c 100%);
   }
+
+  footer {
+    text-align: center;
+  }
+
+  footer div {
+    margin-top: 20px; 
+  }
+  
+  footer i {
+    font-size: 30px;
+    margin: 0 10px;
+    color: #363535;
+  }

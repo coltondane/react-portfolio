@@ -56,14 +56,14 @@ function App() {
         {currentSection === "Resume" && <Resume />}
       </div>
       <footer>
-      <div>
-      <a href="https://www.linkedin.com/in/colton-laidig-13781424b/" target="_blank" rel="noopener noreferrer">
-        <i className="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/coltondane" target="_blank" rel="noopener noreferrer">
-        <i className="fab fa-github"></i>
-      </a>
-    </div>
+        <div>
+        <a href="https://www.linkedin.com/in/colton-laidig-13781424b/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/coltondane" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-github"></i>
+        </a>
+        </div>
       </footer>
     </div>
   );
