@@ -1,15 +1,5 @@
-export function aboutMe() {
-  console.log('I am a function from helpers.js');
-}
-
-export function portfolio() {
-  console.log('I am a function from helpers.js');
-}
-
-export function contactMe() {
-  console.log('I am a function from helpers.js');
-}
-
-export function resume() {
-  console.log('I am a function from helpers.js');
+// Helper functions
+export function validateEmail(email) {
+  var re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return re.test(String(email).toLowerCase());
 }

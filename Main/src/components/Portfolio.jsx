@@ -10,7 +10,7 @@ function Portfolio() {
         id: 1,
         title: "project 1",
         image: testPic,
-        description: '',
+        description: 'test for description',
         webLink: 'https://www.google.co.uk/',
         gitLink: 'https://github.com/coltondane',
         techArray: ['']
@@ -18,7 +18,7 @@ function Portfolio() {
     {
         id: 2,
         title: "project 2",
-        image: '',
+        image: testPic,
         description: '',
         webLink: '',
         gitLink: '',
@@ -27,7 +27,7 @@ function Portfolio() {
     {
         id: 3,
         title: "project 3",
-        image: '',
+        image: testPic,
         description: '',
         webLink: '',
         gitLink: '',
@@ -35,7 +35,7 @@ function Portfolio() {
     },{
         id: 4,
         title: "project 4",
-        image: '',
+        image: testPic,
         description: '',
         webLink: '',
         gitLink: '',
@@ -43,7 +43,7 @@ function Portfolio() {
     },{
         id: 5,
         title: "project 5",
-        image: '',
+        image: testPic,
         description: '',
         webLink: '',
         gitLink: '',
@@ -51,7 +51,7 @@ function Portfolio() {
     },{
         id: 6,
         title: "project 6",
-        image: '',
+        image: testPic,
         description: '',
         webLink: '',
         gitLink: '',
