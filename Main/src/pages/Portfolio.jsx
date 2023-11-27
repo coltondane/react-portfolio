@@ -1,6 +1,6 @@
 // imports
-import ProjectCard from "./ProjectCard";
-import testPic from './test.png';
+import ProjectCard from "../components/ProjectCard";
+import testPic from '../components/test.png';
 
 
 // function

@@ -2,10 +2,10 @@
 import {useState} from 'react';
 import "./App.css";
 // import root component
-import Portfolio from "./components/Portfolio";
-import AboutMe from "./components/AboutMe";
-import Contact from "./components/Contact";
-import Resume from "./components/Resume";
+import Portfolio from "./pages/Portfolio";
+import AboutMe from "./pages/AboutMe";
+import Contact from "./pages/Contact";
+import Resume from "./pages/Resume";
 
 // import click handler helpers
 // import { aboutMe, portfolio, contactMe, resume } from "./utils/helpers";
