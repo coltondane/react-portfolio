@@ -9,3 +9,12 @@ h1 {
     text-align: center;
     font-size: 25px;
 }
+
+.headshot {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 50%;
+    border: 5px solid #8d8c8c;
+}
