@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
+import sendEmail from "../utils/EmailHandler";
 
 // helper 
 import { validateEmail } from "../utils/helpers";
@@ -17,7 +18,6 @@ function Contact() {
       const { target } = event;
       const inputType = target.name;
       const inputValue = target.value;
-      console.log(event.target.value);
       // Based on the input type, we set the state of either email, username, and password
       if (inputType === 'email') {
         setEmail(inputValue);
@@ -29,8 +29,8 @@ function Contact() {
     }
   };
 
-  // form submit handler
-  const handleFormSubmit = (event) => {
+  // form submit/ send email handler
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
     // check if email is valid
     if (!validateEmail(email)) {
@@ -39,12 +39,27 @@ function Contact() {
     }
     // check if form is filled out
     if (name && email && message) {
-      // clear form
-      setName('');
-      setEmail('');
-      setMessage('');
-      setFormSubmitted(true);
-      alert('Thank you for reaching out! I will get back to you as soon as possible :)')
+      try {
+        // send the form data to the my email calling sendEmail
+        await sendEmail(name, email, message);
+        
+        // clear form
+        setName('');
+        setEmail('');
+        setMessage('');
+
+        setFormSubmitted(true);
+        alert('Thank you for reaching out! I will get back to you as soon as possible :)')
+
+        // reset form submitted state after 5 seconds so they can type again if need be
+        setTimeout(() => {
+          setFormSubmitted(false);
+        }, 5000);
+
+      } catch (error) {
+        console.error(error);
+        alert('Form failed to reach my email as something went wrong, please try again later!');
+      }
     } else {
       alert('Please fill out all fields before submitting!');
     }
