@@ -4,5 +4,17 @@
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 1200px;
+    justify-content: center;
 }
 
+.card-element {
+    width: 22rem;
+    border: 1px solid #000000;
+    margin: 1rem;
+    box-shadow: 3px 3px #8d8c8c, -1em 0 .4em #363535;
+}
+
+.description {
+    max-height: 150px;
+    overflow: auto;
+}

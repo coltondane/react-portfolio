@@ -1,13 +1,15 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
+import '../style/portfolio.css';
+
 function ProjectCard({id, title, description, webLink, gitLink, img, techArray}) {
     return (
-      <Card style={{ width: '18rem', border: '1px solid black', margin: '1rem'}}>
-        <Card.Img variant="top" src={img} style={{width: '100%', height: '15%'}} />
+      <Card className='card-element'>
+        <Card.Img variant="top" src={img} style={{width: '100%', height: '33%'}} />
         <Card.Body>
           <Card.Title><strong>{title}</strong></Card.Title>
-          <Card.Text>
+          <Card.Text className='description'>
             {description}
           </Card.Text>
           {/* if the array exists */}
