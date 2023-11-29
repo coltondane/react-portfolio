@@ -1,5 +1,5 @@
 // imports 
-import "../style/AboutMe.css";
+import "../style/aboutMe.css";
 import headshotImage from "../assets/placeholder.png";
 
 // function

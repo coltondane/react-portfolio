@@ -1,6 +1,6 @@
 // root imports
 import {useState} from 'react';
-import "../src/style/App.css";
+import "../src/style/app.css";
 // import root component
 import Portfolio from "./pages/Portfolio";
 import AboutMe from "./pages/AboutMe";

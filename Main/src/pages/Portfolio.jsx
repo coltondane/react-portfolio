@@ -4,6 +4,9 @@ import testPic from '../components/test.png';
 import hyperdriveImg from '../assets/projectHyperdrive.png';
 import marsImg from '../assets/projectMars.png';
 import networkImg from '../assets/socialAPI.png';
+import jateImg from '../assets/jate.png';
+
+import "../style/portfolio.css";
 
 
 // function
@@ -31,18 +34,18 @@ function Portfolio() {
         id: 3,
         title: "Social Network API",
         image: networkImg,
-        description: '',
+        description: "This is a simple backend application utilizing MongoDB and Mongoose ODM to replicate how a social media site might function on the backend. With this users can share their thoughts, react to their friends' thoughts, and create a friend list.",
         webLink: '',
-        gitLink: '',
+        gitLink: 'https://github.com/coltondane/social-network-API',
         techArray: ['JavaScript', 'HTML', 'CSS', 'SCSS']
     },{
         id: 4,
-        title: "project 4",
-        image: testPic,
-        description: '',
-        webLink: '',
-        gitLink: '',
-        techArray: ['JavaScript', 'HTML', 'CSS', 'SCSS']
+        title: "PWA Text Editor",
+        image: jateImg,
+        description: "This application showcases an example of the capability of PWA's and one of the ways they make the life of a developer easier. This specific application is an example of one that can be downloaded onto the users device to be used in offline circumstances. The app itself is a simple text editor.",
+        webLink: 'https://pwa-text-editing-application-311c6fb5be88.herokuapp.com/',
+        gitLink: 'https://github.com/coltondane/PWA-text-editor',
+        techArray: ['JavaScript', 'HTML', 'CSS','Workbox', 'Webpack']
     },{
         id: 5,
         title: "project 5",
@@ -64,7 +67,7 @@ function Portfolio() {
     return (
         <div>
             <h1>Portfolio</h1>
-            <div style={{display: "flex", maxWidth: '1200px', margin: '0 auto', flexWrap: 'wrap'}}>
+            <div className="form-element">
                 {projects.map(project => (
                     <ProjectCard key={project.id} title={project.title} description={project.description} webLink={project.webLink} gitLink={project.gitLink} img={project.image} techArray={project.techArray}/>
                 ))}
