@@ -1,9 +1,15 @@
 // component handling emailJS logic on form submit from contact page
 import emailjs from '@emailjs/browser';
 
-const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+// const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+// const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+// const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+
+const serviceId = "service_38f7k8i";
+const templateId = "template_p2nz6nb";   
+const publicKey = "3k2mEyjS8Of0O5omb";
+
+console.log(serviceId, templateId, publicKey);
 
 const sendEmail = async (name, email, message) => {
     try {
