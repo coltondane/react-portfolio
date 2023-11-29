@@ -6,7 +6,7 @@ function ProjectCard({id, title, description, webLink, gitLink, img, techArray})
       <Card style={{ width: '18rem', border: '1px solid black', margin: '1rem'}}>
         <Card.Img variant="top" src={img} style={{width: '100%'}} />
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
+          <Card.Title><strong>{title}</strong></Card.Title>
           <Card.Text>
             {description}
           </Card.Text>
