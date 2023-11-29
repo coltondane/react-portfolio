@@ -3,6 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 import testPic from '../components/test.png';
 import hyperdriveImg from '../assets/projectHyperdrive.png';
 import marsImg from '../assets/projectMars.png';
+import networkImg from '../assets/socialAPI.png';
 
 
 // function
@@ -28,8 +29,8 @@ function Portfolio() {
     },
     {
         id: 3,
-        title: "project 3",
-        image: testPic,
+        title: "Social Network API",
+        image: networkImg,
         description: '',
         webLink: '',
         gitLink: '',
