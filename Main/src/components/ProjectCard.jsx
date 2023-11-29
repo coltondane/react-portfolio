@@ -10,14 +10,13 @@ function ProjectCard({id, title, description, webLink, gitLink, img, techArray})
           <Card.Text>
             {description}
           </Card.Text>
+          {/* if the array exists */}
          {techArray && techArray.length > 0 && (
           <Card.Text>
             <strong>Technologies:</strong>
-            <ul>
               {techArray.map((tech, index) => (
-                <li key={index}>{tech}</li>
+                <li key={index} style={{listStyle: 'none'}}>{tech}</li>
               ))}
-            </ul>
           </Card.Text>
         )}
           <a href={webLink} target="_blank">
