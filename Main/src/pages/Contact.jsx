@@ -6,8 +6,9 @@ import sendEmail from "../utils/EmailHandler";
 
 import '../style/contact.css';
 
-// helper 
-import { validateEmail } from "../utils/helpers";
+// helpers
+import { validateEmail, showModal, closeModal } from "../utils/helpers";
+
 
 function Contact() {
   const [email, setEmail] = useState("");
@@ -16,6 +17,7 @@ function Contact() {
   const [FormSubmitted, setFormSubmitted] = useState(false);
   // state variables for pop up modal
   const [show, setShow] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
 
   const handleInputChange = (event) => {
     // Getting the value and name of the input which triggered the change when the form is not submitted
@@ -39,7 +41,7 @@ function Contact() {
     event.preventDefault();
     // check if email is valid
     if (!validateEmail(email)) {
-      alert('Please enter a valid email!');
+      showModal('Please enter a valid email!');
       return;
     }
     // check if form is filled out
@@ -54,19 +56,20 @@ function Contact() {
         setMessage('');
 
         setFormSubmitted(true);
-        alert('Thank you for reaching out! I will get back to you as soon as possible :)')
+        showModal('Thank you for reaching out! I will get back to you as soon as possible :)')
 
         // reset form submitted state after 5 seconds so they can type again if need be
         setTimeout(() => {
           setFormSubmitted(false);
+          closeModal();
         }, 5000);
 
       } catch (error) {
         console.error(error);
-        alert('Form failed to reach my email as something went wrong, please try again later!');
+        showModal('Form failed to reach my email as something went wrong, please try again later!');
       }
     } else {
-      alert('Please fill out all fields before submitting!');
+      showModal('Please fill out all fields before submitting!');
     }
   }
 
