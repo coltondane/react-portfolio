@@ -9,10 +9,6 @@ import '../style/contact.css';
 // helpers
 import { validateEmail } from "../utils/helpers";
 
-// component
-import ModalPopUp from '../components/popUpModal';
-
-
 function Contact() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -41,11 +37,13 @@ function Contact() {
 
   // show modal handler
  function showModal(message) {
+  console.log("showing modal");
   setModalMessage(message);
   setShow(true);
 }
 // close modal handler
  function closeModal() {
+  console.log("closing modal");
   setShow(false);
 }
 
@@ -106,12 +104,12 @@ function Contact() {
       </Button>
     </Form>
 
-    {/* pop up modal for when form is submitted and other cases */}
-    <ModalPopUp 
-      showModal={show} 
-      closeModal={closeModal} 
-      modalContent={modalMessage}
-    />
+    <Modal show={show} onHide={closeModal}>
+      <Modal.Header closeButton>
+        <Modal.Title>Modal heading</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>{modalMessage}</Modal.Body>
+    </Modal>
     </>
   );
 }
