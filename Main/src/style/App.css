@@ -5,11 +5,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px; 
-    background-image: linear-gradient(to right, #363535 0%, #8d8c8c 100%);
   }
 
   .name {
-    color: #8d8c8c;
+    color: #232b2b;
     font-size: 40px;
   }
   
@@ -19,18 +18,14 @@ header {
   }
 
   button {
-    background-color: #605f5f;
-    color: #fff;
+    background-color: #262f2f;
+    color: #667275;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 15px;
     cursor: pointer;
     margin: 0 10px;
-  }
-
-  .content {
-    background-image: linear-gradient(to right, #363535 0%, #8d8c8c 100%);
   }
 
   footer {

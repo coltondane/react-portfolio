@@ -118,12 +118,12 @@ function Contact() {
           {messageType}
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className="modal-body">
         <p>
           {modalMessage}
         </p>
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer className="modal-footer">
         <Button onClick={closeModal}>Close</Button>
       </Modal.Footer>
     </Modal>
