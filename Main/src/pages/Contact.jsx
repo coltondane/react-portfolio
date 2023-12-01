@@ -7,7 +7,10 @@ import sendEmail from "../utils/EmailHandler";
 import '../style/contact.css';
 
 // helpers
-import { validateEmail, showModal, closeModal } from "../utils/helpers";
+import { validateEmail } from "../utils/helpers";
+
+// component
+import ModalPopUp from '../components/popUpModal';
 
 
 function Contact() {
@@ -35,6 +38,16 @@ function Contact() {
       }
     }
   };
+
+  // show modal handler
+ function showModal(message) {
+  setModalMessage(message);
+  setShow(true);
+}
+// close modal handler
+ function closeModal() {
+  setShow(false);
+}
 
   // form submit/ send email handler
   const handleFormSubmit = async (event) => {
@@ -97,7 +110,7 @@ function Contact() {
     <ModalPopUp 
       showModal={show} 
       closeModal={closeModal} 
-      modalContent={modalContent}
+      modalContent={modalMessage}
     />
     </>
   );

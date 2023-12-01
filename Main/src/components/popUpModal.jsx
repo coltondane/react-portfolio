@@ -2,7 +2,7 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 
-const ModalPopUp = (props) => ({ show, closeModal, modalContent }) => {
+function ModalPopUp ({ show, closeModal, modalContent }) {
     return (
         <Modal show={show} onHide={closeModal}>
             <Modal.Header closeButton>
@@ -12,3 +12,5 @@ const ModalPopUp = (props) => ({ show, closeModal, modalContent }) => {
         </Modal>
     )
 }
+
+export default ModalPopUp;
