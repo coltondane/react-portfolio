@@ -14,6 +14,8 @@ function Contact() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [FormSubmitted, setFormSubmitted] = useState(false);
+  // state variables for pop up modal
+  const [show, setShow] = useState(false);
 
   const handleInputChange = (event) => {
     // Getting the value and name of the input which triggered the change when the form is not submitted
@@ -69,6 +71,7 @@ function Contact() {
   }
 
   return (
+    <>
     <Form onSubmit={handleFormSubmit} className="form-controller">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
@@ -86,6 +89,14 @@ function Contact() {
         Submit
       </Button>
     </Form>
+
+    {/* pop up modal for when form is submitted and other cases */}
+    <ModalPopUp 
+      showModal={show} 
+      closeModal={closeModal} 
+      modalContent={modalContent}
+    />
+    </>
   );
 }
 
