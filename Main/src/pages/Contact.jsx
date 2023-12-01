@@ -3,6 +3,8 @@ import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import sendEmail from "../utils/EmailHandler";
 
+import '../style/contact.css';
+
 // helper 
 import { validateEmail } from "../utils/helpers";
 
@@ -66,7 +68,7 @@ function Contact() {
   }
 
   return (
-    <Form onSubmit={handleFormSubmit}>
+    <Form onSubmit={handleFormSubmit} className="form-controller">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
         <Form.Control name='email' onChange={handleInputChange} value={email} type="email" placeholder="Enter email" />
