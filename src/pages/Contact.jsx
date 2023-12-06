@@ -87,6 +87,7 @@ function Contact() {
 
   return (
     <>
+    <h1 className="contact-title">Please enter your credentials below</h1>
     <Form onSubmit={handleFormSubmit} className="form-controller">
       <Form.Group className="mb-3" id="" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>

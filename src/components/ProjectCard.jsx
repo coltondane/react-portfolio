@@ -8,13 +8,13 @@ function ProjectCard({id, title, description, webLink, gitLink, img, techArray})
       <Card className='card-element'>
         <Card.Img variant="top" src={img} style={{width: '100%', height: '33%'}} />
         <Card.Body>
-          <Card.Title><strong>{title}</strong></Card.Title>
+          <Card.Title className='title'><strong>{title}</strong></Card.Title>
           <Card.Text className='description'>
             {description}
           </Card.Text>
           {/* if the array exists */}
          {techArray && techArray.length > 0 && (
-          <Card.Text>
+          <Card.Text className='tech'>
             <strong>Technologies:</strong>
               {techArray.map((tech, index) => (
                 <li key={index} style={{listStyle: 'none'}}>{tech}</li>
