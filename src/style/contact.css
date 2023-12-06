@@ -1,5 +1,6 @@
 .form-controller {
-    max-width: 400px;
+    width: 100%;
+    max-width: 600px;
     margin: 0 auto;
     border: 1px solid #ccc;
   }
@@ -28,14 +29,14 @@
     text-align: center;
     font-size: 1.5rem;
     padding: 1rem;
-    color: #8d8c8c;
+    color: #505555;
   }
 
   .modal-body {
     padding: 1rem;
     text-align: center;
     font-size: 25px;
-    color: #8d8c8c;
+    color: #505555;
   }
 
   .modal-footer {
