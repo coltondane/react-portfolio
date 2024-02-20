@@ -1,12 +1,12 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-import '../style/portfolio.css';
+import placeholderImg from '../style/portfolio.css';
 
 function ProjectCard({id, title, description, webLink, gitLink, img, techArray}) {
     return (
       <Card className='card-element'>
-        <Card.Img variant="top" src={img} style={{width: '100%', height: '33%'}} />
+        <Card.Img variant="top" src={placeholderImg} style={{width: '100%', height: '33%'}} />
         <Card.Body>
           <Card.Title className='title'><strong>{title}</strong></Card.Title>
           <Card.Text className='description'>
